@@ -12,7 +12,6 @@ class TemplateServiceImpl constructor(@Autowired private val templateRepository:
     override fun getAllTemplates(): List<TemplateModel>? =
             templateRepository.findAllBy()
 
-
     override fun getTemplate(id: Int): TemplateModel? =
             templateRepository.findById(id).orElse(null)
 
